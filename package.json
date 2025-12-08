@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && electron-builder",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "biome lint .",
+    "fmt": "biome format .",
+    "fmt:write": "biome format --write ."
   },
   "dependencies": {
     "daisyui": "^5.5.8",
@@ -15,6 +17,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.3.8",
     "@tailwindcss/vite": "^4.1.17",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
