@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { DaisyUI } from "./components/DaisyUI";
 
 // TODO fontconfigでtofu対応
 // TODO biomeでclassNameソートできるか試す
@@ -24,6 +25,8 @@ function App() {
 					縦書きエディタテンプレ
 				</button>
 			</div>
+
+			<DaisyUI />
 		</div>
 	);
 }
