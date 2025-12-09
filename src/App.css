@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+/* FIXME inputの背景色が壊れる */
+/* inputの変なbackground-imageを消す(daisyui) */
+:root {
+	--fx-noise: none;
+	--noise: none;
+}
+
 /* Font-Face */
 @font-face {
 	font-family: "MyEllipsis";
@@ -55,12 +62,6 @@
 	font-family:
 		MyEllipsis, MyBoxDrawings, "Helvetica Neue", Helvetica, Arial, "MyYuGothicM",
 		YuGothic, sans-serif;
-}
-
-@layer components {
-	.btn-blue {
-		@apply text-white font-bold px-4 py-2 rounded bg-blue-600 hover:bg-blue-500;
-	}
 }
 
 @layer utilities {
