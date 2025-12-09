@@ -2,10 +2,11 @@
 @plugin "daisyui";
 
 /* FIXME inputの背景色が壊れる */
-/* inputの変なbackground-imageを消す(daisyui) */
-:root {
+/* daisyui.inputの変なbackgroundを消す */
+input {
+	background-color: transparent;
 	--fx-noise: none;
-	--noise: none;
+	/* --noise: none; */
 }
 
 /* Font-Face */
