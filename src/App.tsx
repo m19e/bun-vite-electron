@@ -1,35 +1,29 @@
-import { useState } from "react";
-import { DaisyUI } from "./components/DaisyUI";
+import {
+	type InitialConfigType,
+	LexicalComposer,
+} from "@lexical/react/LexicalComposer";
+import { Editor } from "./components/Editor";
 
-// TODO fontconfigでtofu対応
+// Todo
+// TODO jotai入れる
+
+// Done
 // TODO biomeでclassNameソートできるか試す
 // TODO daisyuiのコンポーネント並べてみる
+// TODO lexical-composerでラップ
+// TODO plugins/useKeybind実装
+// TODO lexicalの縦書き動作確認
+// TODO ビルド検証
 function App() {
-	const [count, setCount] = useState(0);
+	const initialConfig: InitialConfigType = {
+		namespace: "ClaraEditor2",
+		onError: (err) => console.error(err),
+	};
 
 	return (
-		<div className="gothic flex min-h-screen min-w-screen flex-col items-center justify-center gap-2 text-2xl">
-			<h1>Vite + React</h1>
-			<div className="flex flex-col items-center">
-				<button
-					type="button"
-					className="btn btn-primary btn-sm"
-					onClick={() => setCount((count) => count + 1)}
-				>
-					count is {count}
-				</button>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
-			</div>
-			<div className="flex items-center justify-center bg-base-200">
-				<button type="button" className="btn btn-primary btn-lg mincho">
-					縦書きエディタ
-				</button>
-			</div>
-
-			<DaisyUI />
-		</div>
+		<LexicalComposer initialConfig={initialConfig}>
+			<Editor />
+		</LexicalComposer>
 	);
 }
 
