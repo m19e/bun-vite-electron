@@ -1,5 +1,11 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+	exclude: "scrollbar";
+}
+@plugin "tailwind-scrollbar" {
+	nocompatible: true;
+	preferredStrategy: "pseudoelements";
+}
 
 /* FIXME inputの背景色が壊れる */
 /* daisyui.inputの変なbackgroundを消す */
