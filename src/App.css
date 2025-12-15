@@ -102,3 +102,8 @@ html[data-theme="dark"] .text-base-content ::selection {
 	color: #44454a;
 	background-color: #bec1c6;
 }
+
+.editor-scroll {
+	@apply scrollbar-thin scrollbar-thumb-rounded-full;
+	@apply scrollbar-track-transparent scrollbar-thumb-transparent hover:scrollbar-thumb-[#909090];
+}
