@@ -1,5 +1,6 @@
 /** biome-ignore-all lint/correctness/noUnknownProperty: <explanation> */
 @import "tailwindcss";
+/* TODO daisyuiが不要になる可能性を念頭に */
 @plugin "daisyui" {
 	exclude: "scrollbar";
 }
